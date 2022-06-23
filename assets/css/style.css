@@ -11273,8 +11273,14 @@ img {
   display: flex;
   justify-content: flex-end;
 }
+.qr-code-left a {
+  color: #303030 !important;
+}
 .qr-code-right {
   display: flex;
+}
+.qr-code-right a {
+  color: #303030 !important;
 }
 @media (max-width: 991px) {
   .qr-code-left {
@@ -11287,8 +11293,4 @@ img {
 }
 .owl-dots button {
   padding: 0px !important;
-}
-
-a {
-  color: #303030 !important;
 }
