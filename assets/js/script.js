@@ -112,32 +112,12 @@
   });
 
   // tooltips
-
   var tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
   );
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
-
-  // Parallax background
-  function bgParallax() {
-    if ($('.parallax').length) {
-      $('.parallax').each(function () {
-        var height = $(this).position().top;
-        var resize = height - $(window).scrollTop();
-        var doParallax = -(resize / 5);
-        var positionValue = doParallax + 'px';
-        var img = $(this).data('bg-image');
-
-        $(this).css({
-          backgroundImage: 'url(' + img + ')',
-          backgroundPosition: '50%' + positionValue,
-          backgroundSize: 'cover',
-        });
-      });
-    }
-  }
 
   // HERO SLIDER
   var menu = [];
@@ -193,8 +173,6 @@
       },
     },
   };
-
-  var swiper = new Swiper('.swiper-container', swiperOptions);
 
   // DATA BACKGROUND IMAGE
   var sliderBgSetting = $('.slide-bg-image');
@@ -296,7 +274,7 @@
     }
   }
 
-  sortingGallery();
+  // sortingGallery();
 
   /*------------------------------------------
         = MASONRY GALLERY SETTING
@@ -594,7 +572,7 @@
   /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
-  $(window).on('DOMContentLoaded', function () {
+  $(window).on('load', function () {
     // const ids = [
     //   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     //   22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
@@ -619,7 +597,6 @@
       'https://script.google.com/macros/s/AKfycbzbx6OX1e0_uDLWLqGWuse_X1G3R6mhcjaftuw1OHzOExDccb0L8CbgBDM3rfPHFUmN/exec?page=1&limit=5',
       (response) => {
         const { data } = response;
-        debugger
         let list = '';
         for (let i = 0; i < data.length; i++) {
           const { name, wish, time } = data[i];
@@ -647,6 +624,8 @@
           nav: false,
           items: 1,
         });
+
+        sortingGallery();
       }
     );
     // $('.wpo-testimonials-active').owlCarousel({
@@ -664,8 +643,6 @@
     wow.init();
 
     preloader();
-
-    sortingGallery();
 
     toggleMobileNavigation();
 
