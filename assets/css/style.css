@@ -11285,3 +11285,6 @@ img {
     justify-content: center;
   }
 }
+.owl-dots button {
+  padding: 0px !important;
+}
