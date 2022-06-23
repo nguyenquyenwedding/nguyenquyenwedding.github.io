@@ -11288,3 +11288,7 @@ img {
 .owl-dots button {
   padding: 0px !important;
 }
+
+a {
+  color: inherit !important;
+}
