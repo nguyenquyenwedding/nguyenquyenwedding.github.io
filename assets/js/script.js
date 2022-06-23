@@ -173,6 +173,7 @@
       },
     },
   };
+  var swiper = new Swiper('.swiper-container', swiperOptions);
 
   // DATA BACKGROUND IMAGE
   var sliderBgSetting = $('.slide-bg-image');
