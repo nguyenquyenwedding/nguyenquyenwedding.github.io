@@ -11294,3 +11294,7 @@ img {
 .owl-dots button {
   padding: 0px !important;
 }
+
+video {
+  object-fit: contain;
+}
