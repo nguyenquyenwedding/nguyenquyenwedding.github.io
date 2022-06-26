@@ -630,7 +630,7 @@
           items: 1,
         });
 
-        sortingGallery();
+        // sortingGallery();
       }
     );
     // $('.wpo-testimonials-active').owlCarousel({
