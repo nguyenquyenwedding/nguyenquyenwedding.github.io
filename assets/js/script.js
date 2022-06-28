@@ -599,7 +599,7 @@
     // $('#gallery').append(list)
 
     $.get(
-      'https://script.google.com/macros/s/AKfycbzbx6OX1e0_uDLWLqGWuse_X1G3R6mhcjaftuw1OHzOExDccb0L8CbgBDM3rfPHFUmN/exec?page=1&limit=5',
+      'https://script.google.com/macros/s/AKfycbzbx6OX1e0_uDLWLqGWuse_X1G3R6mhcjaftuw1OHzOExDccb0L8CbgBDM3rfPHFUmN/exec?page=1&limit=10',
       (response) => {
         const { data } = response;
         let list = '';
